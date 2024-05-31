@@ -18,5 +18,11 @@
     "globals": "^15.3.0",
     "nuxt": "^3.10.1",
     "typescript-eslint": "^7.10.0"
+  },
+  "dependencies": {
+    "ably": "^2.0.4",
+    "express": "^4.19.2",
+    "p2": "^0.7.1",
+    "phaser": "^3.80.1"
   }
 }
