@@ -73,3 +73,27 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## NOTES ## 🧁🐿️
+
+# TODOS 🍎
+
+next :
+
+- hook up express + nuxt, they aren't currently connected
+- refactor server.js as needed
+- load phaser on app.vue
+- test multiplayer logic with new express server
+
+later ...
+
+- TUTORIAL FILES TO BE FACTORED OUT /server/views, /public/exposion.js, gameover.js, nickname.js, winner.js and script.js?
+
+# DONE 🧃✅
+
+~~- tutorial files~~
+
+# PROJECT STRUCTURE 💬
+
+Documentation for main project structure is in ARCHITECTURE.drawio
+server/views and /public are currently full of tutorial files that will be deleted
