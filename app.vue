@@ -1,20 +1,3 @@
-<script setup>
-import Phaser from "phaser";
-const config = {
-  type: Phaser.AUTO,
-  width: 800,
-  height: 600,
-  parent: "gameContainer",
-  physics: {
-    default: "arcade",
-    arcade: {
-      // gravity: { y: 200 }
-    },
-  },
-  scene: [GameScene],
-};
-const game = new Phaser.Game(config);
-</script>
 <template>
   <UContainer>
     <UCard class="mt-10">
@@ -28,7 +11,7 @@ const game = new Phaser.Game(config);
           /></ColorScheme>
         </div>
       </template>
-      <div id="gameContainer" class="game-div"></div>
+      <PhaserGame :createGame="createGame" v-if="createGame" />
       <UButton
         icon="i-heroicons-book-open"
         to="https://ui.nuxt.com"
@@ -38,3 +21,54 @@ const game = new Phaser.Game(config);
     </UCard>
   </UContainer>
 </template>
+<script lang="ts">
+import PhaserGame from "nuxtjs-phaser/phaserGame.vue";
+
+async function getGame() {
+  const { createGame } = await import("~/game/game");
+  return createGame;
+}
+
+declare interface IndexPageData {
+  createGame?: () => Phaser.Game;
+}
+
+const setPhaserFocus = () => {
+  const phaser = document.getElementById("phaser");
+  if (phaser) phaser.focus();
+};
+
+export default {
+  name: "IndexPage",
+  components: { PhaserGame },
+  data(): IndexPageData {
+    return {
+      createGame: undefined,
+    };
+  },
+  methods: {
+    emitPhaserEvent(eventName: string) {
+      this.$phaser?.eventEmitter?.emit(eventName, "default");
+    },
+    jump() {
+      this.emitPhaserEvent("jump");
+    },
+    walkLeft() {
+      this.emitPhaserEvent("walkLeft");
+    },
+    walkRight() {
+      this.emitPhaserEvent("walkRight");
+    },
+    pause() {
+      this.emitPhaserEvent("pause");
+    },
+    resume() {
+      this.emitPhaserEvent("resume");
+    },
+  },
+  async mounted() {
+    this.createGame = await getGame();
+    this.$nextTick(() => setPhaserFocus());
+  },
+};
+</script>
