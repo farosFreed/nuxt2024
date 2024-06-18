@@ -1,3 +1,4 @@
+import { useConnectionStateListener } from "ably/react";
 import Phaser from "phaser";
 export class TuxPlayer extends Phaser.Physics.Arcade.Sprite {
   jumpTimer = 0;
@@ -9,7 +10,7 @@ export class TuxPlayer extends Phaser.Physics.Arcade.Sprite {
     scene.physics.add.existing(this);
     scene.physics.world.enable(this);
 
-    this.setScale(3);
+    this.setScale(1);
     this.setBounce(0.2);
     this.setCollideWorldBounds(true);
 
@@ -39,6 +40,7 @@ export class TuxPlayer extends Phaser.Physics.Arcade.Sprite {
       repeat: -1,
     });
 
+    // used as interact for now
     scene.anims.create({
       key: "jump",
       frames: scene.anims.generateFrameNames("tux", {
@@ -57,31 +59,47 @@ export class TuxPlayer extends Phaser.Physics.Arcade.Sprite {
 
   update() {}
 
+  //movement
   walkRight() {
     this.setVelocityX(100);
     this.anims.play("walk", true);
     this.flipX = false;
   }
-
   walkLeft() {
     this.setVelocityX(-100);
     this.anims.play("walk", true);
     this.flipX = true;
   }
-
-  isJumping = () =>
-    this.body?.touching.down && this.scene.time.now < this.jumpTimer;
-
-  jump() {
-    if (this.isJumping()) return;
-
-    this.setVelocityY(-50);
-    this.anims.play("jump", true);
-    this.jumpTimer = this.scene.time.now + 3000;
+  walkDown() {
+    this.setVelocityY(100);
+    this.anims.play("walk", true);
   }
+  walkUp() {
+    this.setVelocityY(-100);
+    this.anims.play("walk", true);
+  }
+
+  // interaction
+  interact() {
+    this.anims.play("jump", true);
+    // TODO send event to trigger interaction
+    console.log("interact");
+  }
+
+  // isJumping = () =>
+  //   this.body?.touching.down && this.scene.time.now < this.jumpTimer;
+
+  // jump() {
+  //   if (this.isJumping()) return;
+
+  //   this.setVelocityY(-50);
+  //   this.anims.play("jump", true);
+  //   this.jumpTimer = this.scene.time.now + 3000;
+  // }
 
   idle() {
     this.setVelocityX(0);
+    this.setVelocityY(0);
     this.anims.play("idle", true);
   }
 }

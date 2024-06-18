@@ -1,15 +1,16 @@
 // based on
 // https://medium.com/@n.srushtika/building-a-realtime-multiplayer-browser-game-in-less-than-a-day-part-3-4-ede95eb924a0
-const path = require("path");
-require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
+// const path = require("path");
+// require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 
-const express = require("express");
-const Ably = require("ably");
-const p2 = require("p2");
-const app = express();
-const ABLY_API_KEY = process.env.ABLY_API_KEY;
-console.log("ABLY_API_KEY", ABLY_API_KEY);
+// const express = require("express");
+// const Ably = require("ably");
+// const p2 = require("p2");
+// const app = express();
+// const ABLY_API_KEY = process.env.ABLY_API_KEY;
+// console.log("ABLY_API_KEY", ABLY_API_KEY);
 
+// CONSTS
 const CANVAS_HEIGHT = 750;
 const CANVAS_WIDTH = 1400;
 const SHIP_PLATFORM = 718;
@@ -20,6 +21,7 @@ const P2_WORLD_TIME_STEP = 1 / 16;
 const MIN_PLAYERS_TO_START_GAME = 3;
 const GAME_TICKER_MS = 100;
 
+// INITIAL GAME STATE
 let peopleAccessingTheWebsite = 0;
 let players = {};
 let playerChannels = {};
@@ -43,6 +45,7 @@ let copyOfShipBody = {
   velocity: "",
 };
 
+// SETUP CONNECTION - DONE IN PLUGIN
 const realtime = new Ably.Realtime({
   key: ABLY_API_KEY,
   echoMessages: false,
@@ -55,7 +58,7 @@ const uniqueId = function () {
 
 app.use(express.static("js"));
 
-// implement token auth
+// implement token auth path
 app.get("/auth", (request, response) => {
   const tokenParams = { clientId: uniqueId() };
   realtime.auth.createTokenRequest(tokenParams, function (err, tokenRequest) {

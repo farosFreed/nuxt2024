@@ -76,13 +76,22 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ## NOTES ## 🧁🐿️
 
+When testing locally, be sure to use firefox or enable file-access-from-files in chrome.
+Otherwise, phaser won't load. https://chrome-allow-file-access-from-file.com/
+
 # TODOS 🍎
 
 next :
 
-- refactor server.js as needed
-- add 2nd player controls via gamepad?
-- test multiplayer logic with new nitro server
+- Build basic game
+  - ~~physics / config changes~~
+  - ~~change jump to interact~~
+  - ~~up/down movement~~
+  - ~~kitchen object spritesheets~~
+  - kitchen object game code
+    - basic collisions
+- test online multiplayer logic with ably server plugin, refactor server.js as needed
+  - make player join screen
 - update drawio to reflect tech stack changes
 
 later ...
@@ -93,6 +102,7 @@ later ...
 
 # DONE 🧃✅
 
+~~- add 2nd player controls via gamepad?~~
 ~~- tutorial files~~
 ~~- load phaser on app.vue~~
 

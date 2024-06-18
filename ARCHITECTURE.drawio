@@ -1,37 +1,37 @@
 <mxfile host="65bd71144e">
     <diagram id="M1rmrU9Zc5NufmcTX-pv" name="Page-1">
-        <mxGraphModel dx="648" dy="518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="617" dy="389" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="4" value="" style="group;fontStyle=1" vertex="1" connectable="0" parent="1">
+                <mxCell id="4" value="" style="group;fontStyle=1" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="70" y="120" width="340" height="350" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;" vertex="1" parent="4">
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;" parent="4" vertex="1">
                     <mxGeometry width="340" height="350" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#000000&quot;&gt;p2.js&lt;br&gt;PHYSICS&lt;br&gt;server-side&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="2">
+                <mxCell id="16" value="&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#000000&quot;&gt;p2.js&lt;br&gt;PHYSICS&lt;br&gt;server-side&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#fad9d5;strokeColor=#ae4132;" parent="2" vertex="1">
                     <mxGeometry x="180" y="100" width="140" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="Express.js&lt;br style=&quot;font-size: 18px;&quot;&gt;SERVER" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=0" vertex="1" parent="4">
+                <mxCell id="3" value="Nuxt / Nitro&lt;br style=&quot;font-size: 18px;&quot;&gt;SERVER" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=0" parent="4" vertex="1">
                     <mxGeometry x="110" y="30" width="110" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#000000&quot;&gt;ABLY.io&lt;br&gt;WEBSOCKETS&lt;br&gt;&lt;/font&gt;&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 51);&quot;&gt;&lt;font color=&quot;#6600cc&quot;&gt;token auth&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#000000&quot;&gt;Sets up channels?&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="4">
-                    <mxGeometry x="10" y="100" width="140" height="210" as="geometry"/>
+                <mxCell id="8" value="&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#000000&quot;&gt;plugins/ably.server.js&lt;br&gt;WEBSOCKETS&lt;br&gt;&lt;/font&gt;&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12px; line-height: 18px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 51);&quot;&gt;&lt;font color=&quot;#6600cc&quot;&gt;token auth&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#000000&quot;&gt;Sets up channels?&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="4" vertex="1">
+                    <mxGeometry x="10" y="100" width="160" height="210" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="" style="group;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" connectable="0" parent="1">
+                <mxCell id="5" value="" style="group;fillColor=#fad9d5;strokeColor=#ae4132;" parent="1" vertex="1" connectable="0">
                     <mxGeometry x="490" y="120" width="310" height="280" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;" vertex="1" parent="5">
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;" parent="5" vertex="1">
                     <mxGeometry width="310" height="280" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="Nuxt.js&lt;br style=&quot;font-size: 18px;&quot;&gt;FRONTEND" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=0" vertex="1" parent="5">
-                    <mxGeometry x="35" y="30" width="120" height="60" as="geometry"/>
+                <mxCell id="7" value="Nuxt 3&lt;br style=&quot;font-size: 18px;&quot;&gt;Client" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=18;fontStyle=0" parent="5" vertex="1">
+                    <mxGeometry x="115" y="30" width="80" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#000000&quot;&gt;ABLY.io&lt;br&gt;WEBSOCKETS&lt;br&gt;listens for events,&lt;br&gt;publishes to server&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="5">
+                <mxCell id="9" value="&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#000000&quot;&gt;ABLY.io&lt;br&gt;WEBSOCKETS&lt;br&gt;listens for events,&lt;br&gt;publishes to server&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="5" vertex="1">
                     <mxGeometry x="15" y="100" width="120" height="180" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#000000&quot;&gt;Phaser3&lt;br&gt;PHYSICS&lt;br&gt;client-side&lt;br&gt;&amp;amp; common &lt;br&gt;game functions&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="5">
+                <mxCell id="13" value="&lt;font style=&quot;font-size: 15px;&quot; color=&quot;#000000&quot;&gt;Phaser3&lt;br&gt;PHYSICS&lt;br&gt;client-side&lt;br&gt;&amp;amp; common &lt;br&gt;game functions&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#fad7ac;strokeColor=#b46504;" parent="5" vertex="1">
                     <mxGeometry x="170" y="100" width="120" height="180" as="geometry"/>
                 </mxCell>
             </root>

@@ -3,7 +3,7 @@
     <UCard class="mt-10">
       <template #header>
         <div class="flex justify-between">
-          <h1>Welcome to Nuxt UI Starter</h1>
+          <h1>_Yourname_Tea_Shoppe_</h1>
           <ColorScheme
             ><USelect
               v-model="$colorMode.preference"
@@ -12,12 +12,12 @@
         </div>
       </template>
       <PhaserGame :createGame="createGame" v-if="createGame" />
-      <UButton
+      <!-- <UButton
         icon="i-heroicons-book-open"
         to="https://ui.nuxt.com"
         target="_blank"
         >Open Nuxt UI Documentation</UButton
-      >
+      > -->
     </UCard>
   </UContainer>
 </template>
@@ -29,8 +29,15 @@ async function getGame() {
   return createGame;
 }
 
+async function fetchGameState(gameId = 0) {
+  const gameState = await $fetch("/api/gamestate");
+  console.log("data", gameState);
+  return gameState;
+}
+
 declare interface IndexPageData {
   createGame?: () => Phaser.Game;
+  gameState?: any;
 }
 
 const setPhaserFocus = () => {
@@ -44,6 +51,7 @@ export default {
   data(): IndexPageData {
     return {
       createGame: undefined,
+      gameState: undefined,
     };
   },
   methods: {
@@ -52,6 +60,9 @@ export default {
     },
     jump() {
       this.emitPhaserEvent("jump");
+    },
+    interact() {
+      this.emitPhaserEvent("interact");
     },
     walkLeft() {
       this.emitPhaserEvent("walkLeft");
@@ -67,6 +78,7 @@ export default {
     },
   },
   async mounted() {
+    // this.gameState = await fetchGameState(); // to do implement gameId
     this.createGame = await getGame();
     this.$nextTick(() => setPhaserFocus());
   },

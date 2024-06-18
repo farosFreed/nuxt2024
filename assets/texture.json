@@ -1,0 +1,145 @@
+{
+	"textures": [
+		{
+			"image": "texture",
+			"format": "RGBA8888",
+			"size": {
+				"w": 241,
+				"h": 43
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "counter.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 43
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 80,
+						"h": 43
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 80,
+						"h": 43
+					}
+				},
+				{
+					"filename": "counterside.png",
+					"rotated": true,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 63
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 63
+					},
+					"frame": {
+						"x": 80,
+						"y": 0,
+						"w": 32,
+						"h": 63
+					}
+				},
+				{
+					"filename": "stove.png",
+					"rotated": true,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 30,
+						"h": 43
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 30,
+						"h": 43
+					},
+					"frame": {
+						"x": 143,
+						"y": 0,
+						"w": 30,
+						"h": 43
+					}
+				},
+				{
+					"filename": "window.png",
+					"rotated": true,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 26,
+						"h": 29
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 26,
+						"h": 29
+					},
+					"frame": {
+						"x": 186,
+						"y": 0,
+						"w": 26,
+						"h": 29
+					}
+				},
+				{
+					"filename": "kettle.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 1,
+						"w": 16,
+						"h": 11
+					},
+					"frame": {
+						"x": 215,
+						"y": 0,
+						"w": 16,
+						"h": 11
+					}
+				},
+				{
+					"filename": "tea1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 2,
+						"w": 10,
+						"h": 9
+					},
+					"frame": {
+						"x": 231,
+						"y": 0,
+						"w": 10,
+						"h": 9
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.7"
+	}
+}
